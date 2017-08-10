@@ -1,9 +1,9 @@
 # F2C
 Convert any temperature to either Fahrenheit, Celsius, or Kelvin.
 ________________________________________________________________
-`Usage:    F2C [-option] [argument]
+Usage:    F2C [-option] [argument]
 
-Option:  c [temperature]: convert Celsius to Kelvin and Fahrenheit
+Option:   c [temperature]: convert Celsius to Kelvin and Fahrenheit
 
           f [temperature]: convert a Fahrenheit temperature to Celsius and Kelvin
           
@@ -13,5 +13,5 @@ Option:  c [temperature]: convert Celsius to Kelvin and Fahrenheit
           
           -v: show version information
           
-`
+
 This took me about 2.5 hours to code completely from scratch.
