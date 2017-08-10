@@ -10,10 +10,10 @@
 #define HELP help(argv[0])
 #define FLOATARG atof(optarg)
 #define OPTS "vhk:f:c:"
-/** For reference, an option followed by a double colon **/
+/** For reference, an option followed by a nothing      **/
 /**        signifies that it takes no arguments         **/
 /**  while an option followed by one colon signifies    **/
-/**           that it takes one argument.               **/
+/**         that it takes a required argument           **/
 
 std::string ver = VERSION;
 
