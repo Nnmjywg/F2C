@@ -9,7 +9,7 @@
 #define VERSION "1.0"
 #define HELP help(argv[0])
 #define FLOATARG atof(optarg)
-#define OPTS "vk:f:c:h"
+#define OPTS "vhk:f:c:"
 /** For reference, an option followed by a double colon **/
 /**        signifies that it takes no arguments         **/
 /**  while an option followed by one colon signifies    **/
