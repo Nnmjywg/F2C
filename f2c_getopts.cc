@@ -1,10 +1,6 @@
-/*
- * #define LANG C++
- */
 #include <iostream>
 #include <stdlib.h>
 #include <unistd.h>
-#include <ctype.h>
 
 #define VERSION "1.0"
 #define HELP help(argv[0])
