@@ -3,7 +3,7 @@
  */
 
 #include <stdio.h> /** standard io **/
-#include <stdlib.h> /** exit(), atof and the lot **/
+#include <stdlib.h> /** exit(), atof() and the lot **/
 #include <unistd.h> /** needed for getopt() **/
 
 /*** SYMBOIC CONSTANTS ***/
@@ -21,39 +21,38 @@ char *ver = VERSION;
 
 void help(char *s);
 
-/*** Fahrenheit ***/
+/*** FAHRENHEIT ***/
 float FK(float F) {
     return(((5.0 / 9.0) * (F - 32.0)) + 273.15);
 }
 float FC(float F) {
     return((5.0 / 9.0) * (F - 32.0));
 }
-
 void printfahr(float F) {
     printf(TOVERH);
     printf("%4.3f\t%5.3f\t%5.3f\n", F, FC(F), FK(F));
 }
 
-/** Celsius **/
-float CK(float C) {
+/** CELSIUS **/
+float CK(float C) { /** CONVERT CELSIUS TO KELVIN **/ 
     return((C + 273.15));
 }
-float CF(float C) {
+float CF(float C) { /** CONVERT CELSIUS TO FAHRENHEIT **/
     return((C * (9.0 / 5.0) - 32.0));
 }
-void printc(float C) {
+void printc(float C) { /** PRINT THE MATH **/
     printf(TOVERH);
     printf("%4.3f\t%5.3f\t%5.3f\n", CF(C), C, CK(C));
 }
 
-/*** Kelvin ***/
-float KC(float K) {
+/*** KELVIN ***/
+float KC(float K) { /** CONVERT 
     return(K - 273.15);
 }
-float KF(float K) {
+float KF(float K) { /** CONVERT KELVIN TO FAHRENHEIT **/
     return((K - 273.15) * (9.0 / 5.0) - 32.0);
 }
-void printk(float K) {
+void printk(float K) { /** PRINT THE MATH **/
     printf(TOVERH);
     printf("%4.3f\t%5.3f\t%5.3f\n", KF(K), KC(K), K);
 }
@@ -69,8 +68,7 @@ int main(int argc, char *argv[]) {
         {
             switch(arg) {
                 case 'c':
-                    if(optarg == NULL)
-                    {
+                    if(optarg == NULL) {
                         HELP;
                         exit(1);
                     }
@@ -80,8 +78,7 @@ int main(int argc, char *argv[]) {
                 break;
     
                 case 'f':
-                    if(optarg == NULL)
-                    {
+                    if(optarg == NULL)  {
                         HELP;
                         exit(1);
                     }
@@ -95,8 +92,7 @@ int main(int argc, char *argv[]) {
                 break;
     
                 case 'k':
-                    if(optarg == NULL)
-                    {
+                    if(optarg == NULL) {
                         HELP;
                         exit(1);
                     }
@@ -117,7 +113,6 @@ int main(int argc, char *argv[]) {
     }
     return 0;
 }
-
 void help(char *s) {
     printf("USAGE:\t%s [-c] Celsius [-f] Fahrenheit [-h] [-k] Kelvin [-v]\n", s);
 }
