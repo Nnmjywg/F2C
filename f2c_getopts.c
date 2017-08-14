@@ -12,7 +12,7 @@
 #define FLOATARG atof(optarg) /** atof is kind of vague, so a #define is better **/
 #define TOVERH "FAHR\tCELSIUS\tKELVIN\n" /** just so I don't have to type it out ever time **/
 #define OPTS "vk:f:c:h" /** I prefer a #define to this -> b:ull:s::hi:t: **/
-/** For reference, an option followed by a double colon **/
+/** For reference, an option followed by nothing        **/
 /**        signifies that it takes no arguments         **/
 /**  while an option followed by one colon signifies    **/
 /**           that it takes one argument.               **/
